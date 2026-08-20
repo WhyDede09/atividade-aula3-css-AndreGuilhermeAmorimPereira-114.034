@@ -1,0 +1,261 @@
+/*  RESET DE PAGINA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: rgb(85, 6, 6);      
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+p {
+    font-size: 25px;
+    display: inline-block;
+    background-color: white;
+    color: #311919;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    margin-left: 30px;
+    border: 1px solid antiquewhite;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* configuração da seção topo */
+
+.topo {
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 10px solid #490404;
+
+}
+
+.topo-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-links a {
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 24px;
+    font-size: 16px;
+    transition: 0.2s all ease-in-out;
+
+    &:hover {
+        color: rgb(192, 22, 22);
+    }
+}
+
+/* configurações da seção sobre */
+
+.sobre {
+    padding: 80px 0;
+    background-color: rgb(138, 47, 41);
+}
+
+.sobre-conteudo {
+    text-align: center;
+    gap: 50px;
+}
+
+.sobre-conteudo div {
+    flex: 1
+}
+
+.sobre-tag{
+    display: inline-block;
+    background-color: white;
+    color: #311919;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    margin-left: 400px;
+    border: 1px solid antiquewhite;
+    font-size: 8px;
+    text-align: center;
+
+}
+
+.sobre-img {
+    width: 40%;
+    border-radius: 26px;
+    object-fit: cover;
+    display: block;
+    box-sizing: border-box;
+    align-items: center;
+    margin-left: 350px;
+}
+
+.sobre h2 {
+    display: inline-block;
+    background-color: firebrick;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    color: #1f1f1f;
+    letter-spacing: -1;
+    margin-bottom: 16px;
+    margin-left: 500px;
+    border: 1px solid #311919;
+    border-radius: 30px;
+}
+
+.sobre p {
+    font-size: 17px;
+    margin-bottom: 18px;
+    color: #311919;
+}
+
+
+/* configuração sobre a seção produtos */
+
+.produtos {
+    padding: 80px 0;
+    background-color: rgb(190, 99, 87);
+}
+
+.produtos-titulo {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.produtos-imagem {
+    width: 80%;
+    height: 200px;
+    border-radius: 26px;
+    object-fit: cover;
+    display: block;
+    box-sizing: border-box;
+
+}
+
+.produtos-tag {
+    display: inline-block;
+    background-color: white;
+    color: #311919;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    border: 1px solid antiquewhite;
+    font-size: 16px;
+
+}
+
+.produtos h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+    color: #1f1f1f;
+    letter-spacing: -1;
+}
+
+.produtos p {
+    font-size: 17px;
+    margin-bottom: 18px;
+    color: #311919;
+}
+
+.produtos-cards {
+    display: flex;
+    gap: 25px;
+}
+
+.produtos-card {
+    background-color: #fff;
+    padding: 28px;
+    border-radius: 24px;
+    flex: 1;
+    box-shadow:  20px 45px rgba(31, 31, 31, 012);
+    border: 1px solid #e5e0d8;
+    transition: 0.3;
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 20px 45px rgba(31, 31, 31, 012);;
+
+    }
+}
+
+/* CONFIGURAÇÃO DA SEÇÃO DE CONTATO */
+
+.contato {
+    padding: 80px 0;
+    background-color: rgb(212, 146, 129);
+
+}
+
+.contato-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.contato-texto {
+    max-width: 560px;
+}
+
+.contato-tag {
+    display: inline-block;
+    background-color: white;
+    color: #311919;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    border: 1px solid antiquewhite;
+    font-size: 16px;
+}
+
+.contato h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+    color: #1f1f1f;
+    letter-spacing: -1px
+
+}
+
+.contato-texto p {
+    font-size: 17px;
+    line-height: 17px;
+    color: #1f1f1f;
+    margin-bottom: 15px;
+}
+
+.contato-card p {
+    color: #1f1f1f;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
+
+.contato-botao {
+    display: inline-block;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #000000;
+        transform: translatey(-3px);
+    }
+}
