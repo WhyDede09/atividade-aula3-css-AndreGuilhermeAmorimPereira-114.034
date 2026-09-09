@@ -1,261 +1,394 @@
-/*  RESET DE PAGINA */
+/* ===== RESET DE PÁGINA ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
+/*
+   ===== MOBILE FIRST =====
+*/
+
 body {
-    background-color: rgb(85, 6, 6);      
+    background-color: rgb(85, 6, 6);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-p {
-    font-size: 25px;
+.container {
+    width: 100%;
+    max-width: 75rem;
+    /* 1200px */
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* tag/label reutilizável (display: inline-block dá o "efeito pílula") */
+.sobre-tag,
+.produtos-tag,
+.contato-tag {
     display: inline-block;
-    background-color: white;
-    color: #311919;
-    padding: 8px 14px;
+    background-color: #ffffff;
+color: #311919;;
+ padding: 0.5rem 0.9rem;
     border-radius: 20px;
     font-weight: 700;
-    margin-bottom: 18px;
-    margin-left: 30px;
+    margin-bottom: 1.1rem;
     border: 1px solid antiquewhite;
-    font-size: 16px;
+    font-size: 0.85rem;
     text-align: center;
 }
 
+h1,
+h2,
+h3 {
+    color: #1f1f1f;
+}
 
-/* configuração da seção topo */
+/* ===== SEÇÃO TOPO ===== */
 
 .topo {
-    background-color: white;
-    padding: 20px 0;
+    background-color: #ffffff;
+    padding: 1.5rem 0;
     border-bottom: 10px solid #490404;
-
 }
 
 .topo-conteudo {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+}
+
+.topo-titulo h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.topo-subtitulo {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #311919;
+}
+/* Flexbox: menu de navegação */
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    width: 100%;
 }
 
 .menu-links a {
+    display: inline-block;
     color: rgb(37, 37, 37);
     text-decoration: none;
     font-weight: 600;
-    margin: 24px;
-    font-size: 16px;
+    font-size: 1rem;
     transition: 0.2s all ease-in-out;
-
-    &:hover {
-        color: rgb(192, 22, 22);
-    }
 }
 
-/* configurações da seção sobre */
+.menu-links a:hover {
+    color: rgb(192, 22, 22);
+}
+
+/* ===== SEÇÃO SOBRE ===== */
 
 .sobre {
-    padding: 80px 0;
-    background-color: rgb(138, 47, 41);
+    padding: 4rem 0;
+    background-color:  rgb(138, 47,41);
 }
 
+/* Flexbox: texto e imagem empilhados no mobile */
 .sobre-conteudo {
-    text-align: center;
-    gap: 50px;
-}
-
-.sobre-conteudo div {
-    flex: 1
-}
-
-.sobre-tag{
-    display: inline-block;
-    background-color: white;
-    color: #311919;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-weight: 700;
-    margin-bottom: 18px;
-    margin-left: 400px;
-    border: 1px solid antiquewhite;
-    font-size: 8px;
-    text-align: center;
-
-}
-
-.sobre-img {
-    width: 40%;
-    border-radius: 26px;
-    object-fit: cover;
-    display: block;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-left: 350px;
+    text-align: center;
+    gap: 2rem;
+}
+
+.sobre-texto-bloco {
+    max-width: 40rem;
 }
 
 .sobre h2 {
     display: inline-block;
     background-color: firebrick;
     font-weight: 700;
-    font-size: 16px;
-    margin-bottom: 18px;
-    padding: 8px 14px;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.9rem;
     color: #1f1f1f;
-    letter-spacing: -1;
-    margin-bottom: 16px;
-    margin-left: 500px;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
     border: 1px solid #311919;
-    border-radius: 30px;
+ border-radius: 30px;
 }
 
-.sobre p {
-    font-size: 17px;
-    margin-bottom: 18px;
-    color: #311919;
+.sobre-texto {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1.05rem;
+    color: #ffffff;
+font-weight: 400;
 }
 
+.sobre-img {
+    width: 70%;
+    max-width: 20rem;
+    border-radius: 26px;
+    object-fit: cover;
+    display: block;
+}
 
-/* configuração sobre a seção produtos */
+/* ===== SEÇÃO PRODUTOS ===== */
 
 .produtos {
-    padding: 80px 0;
-    background-color: rgb(190, 99, 87);
+    padding: 4rem 0;
+    background-color: rgb(190, 99, 7);
 }
 
 .produtos-titulo {
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto 40px;
-}
-
-.produtos-imagem {
-    width: 80%;
-    height: 200px;
-    border-radius: 26px;
-    object-fit: cover;
-    display: block;
-    box-sizing: border-box;
-
-}
-
-.produtos-tag {
-    display: inline-block;
-    background-color: white;
-    color: #311919;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-weight: 700;
-    margin-bottom: 18px;
-    border: 1px solid antiquewhite;
-    font-size: 16px;
-
+    max-width: 43.75rem;
+    margin: 0 auto 2.5rem;
 }
 
 .produtos h2 {
-    font-size: 32px;
-    margin-bottom: 18px;
-    color: #1f1f1f;
-    letter-spacing: -1;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
 }
 
-.produtos p {
-    font-size: 17px;
-    margin-bottom: 18px;
-    color: #311919;
+.produtos-titulo > p {
+    background: none;
+    border: none;
+    padding: 0;
+    display: block;
+    font-size: 1.05rem;
+    color: #1f1f1f;
+}
+
+produtos-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.produtos-lista li {
+    display: inline-block;
+    background-color: #ffffff;
+color: #311919;;
+ padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
 }
 
 .produtos-cards {
-    display: flex;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 
 .produtos-card {
-    background-color: #fff;
-    padding: 28px;
+    background-color: #ffffff;
+padding: 1.75rem;
     border-radius: 24px;
-    flex: 1;
-    box-shadow:  20px 45px rgba(31, 31, 31, 012);
+    box-shadow: 0 10px 25px rgba(31, 31, 31, 0.12);
     border: 1px solid #e5e0d8;
-    transition: 0.3;
-    &:hover {
-        transform: translateY(-8px);
-        box-shadow: 20px 45px rgba(31, 31, 31, 012);;
-
-    }
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
-/* CONFIGURAÇÃO DA SEÇÃO DE CONTATO */
+.produtos-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(31, 31, 31, 0.16);
+}
+
+.produtos-imagem {
+    width: 100%;
+    height: 12.5rem;
+    border-radius: 26px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.produtos-card p {
+    font-size: 0.95rem;
+    color: #311919;
+}
+/* ===== SEÇÃO CONTATO ===== */
 
 .contato {
-    padding: 80px 0;
-    background-color: rgb(212, 146, 129);
-
+    padding: 4rem 0;
+    background-color:  rgb(212, 146 129);
 }
 
+/* Flexbox: texto e cartão de contato empilhados no mobile */
 .contato-conteudo {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 50px;
+    text-align: center;
+    gap: 2rem;
 }
 
 .contato-texto {
-    max-width: 560px;
-}
-
-.contato-tag {
-    display: inline-block;
-    background-color: white;
-    color: #311919;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-weight: 700;
-    margin-bottom: 18px;
-    border: 1px solid antiquewhite;
-    font-size: 16px;
+    max-width: 35rem;
 }
 
 .contato h2 {
-    font-size: 36px;
-    margin-bottom: 18px;
-    color: #1f1f1f;
-    letter-spacing: -1px
-
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
 }
 
-.contato-texto p {
-    font-size: 17px;
-    line-height: 17px;
+.contato-texto > p:not(.contato-tag) {
+    background: none;
+    border: none;
+    padding: 0;
+    display: block;
+    font-size: 1.05rem;
     color: #1f1f1f;
-    margin-bottom: 15px;
 }
 
-.contato-card p {
-    color: #1f1f1f;
-    font-weight: bold;
-    margin-bottom: 15px;
+contato-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
 
+.contato-info {
+    color: #1f1f1f;
+font-weight: bold;
 }
 
 .contato-botao {
     display: inline-block;
     background-color: #1f1f1f;
     color: #ffffff;
-    padding: 14px 24px;
+    padding: 0.9rem 1.5rem;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.95rem;
     transition: 0.3s;
+}
 
-    &:hover {
-        background-color: #000000;
-        transform: translatey(-3px);
+.contato-botao:hover {
+    background-color: #000000;
+    transform: translateY(-3px);
+}
+
+/* ===== RODAPÉ ===== */
+
+.rodape {
+    background-color: #490404;
+    padding: 1.25rem 0;
+    text-align: center;
+}
+
+.rodape-texto {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #ffffff;
+    font-size: 0.8rem;
+}
+
+/*
+   ====== MEDIA QUERIES — telas maiores ======
+*/
+
+@media (min-width: 768px) {
+
+       .topo-conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .topo-titulo h1 {
+        font-size: 1.9rem;
+    }
+
+    .menu-links {
+        flex-direction: row;
+        width: auto;
+        gap: 1.5rem;
+    }
+
+    
+    .sobre-conteudo {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .sobre-img {
+        width: 35%;
+    }
+
+    
+    .produtos-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .produtos-lista {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    
+    .contato-conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .contato-card {
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+
+
+    .topo-titulo h1 {
+        font-size: 2.1rem;
+    }
+
+
+    .produtos-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .sobre-img {
+        width: 28%;
     }
 }
